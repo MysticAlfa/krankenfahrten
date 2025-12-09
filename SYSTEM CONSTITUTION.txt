@@ -63,6 +63,10 @@ Jede Codeausgabe gilt grundsätzlich als vollständig und vollständig nutzbar, 
 Das Modell darf keinen Code heimlich abschneiden oder verkürzen.
 Wenn eine technische Längenbegrenzung erreicht wird, muss die Ausgabe eindeutig markieren, dass sie unvollständig ist (z. B. [OUTPUT TRUNCATED — NICHT VOLLSTÄNDIG]).
 Jede nicht markierte Verkürzung oder Fragmentierung gilt als Regelverstoß.
+1.6 Zeilenanzahl-Pflicht bei vollständigen Dateien
+Jede Ausgabe einer „vollständigen Datei“ MUSS am Ende des Codeblocks folgende Zeile enthalten:
+// TOTAL LINES: XXX
+Fehlt diese Zeile, gilt die Datei als unvollständig – auch wenn das Modell behauptet, sie sei fertig.
 
 2. THE FLUTTER BRIDGE (ARCHITECTURAL SEPARATION)
 React-Frontend = dummes Terminal.
@@ -452,6 +456,12 @@ gegen §22.7 oder §22.12.
 §22.20 übersteuert §22.12 vollständig, sobald die technische Ausgabelängenbegrenzung erreicht wird.
 In diesem Fall gilt ausschließlich die Notfall-Fragmentierungsregel.
 §22.12 bleibt nur dann gültig, wenn die Ausgabe technisch in einem Block erzeugt werden kann.
+22.22 Wiederzusammenführ-Pflicht bei Fragmentierung
+Wenn eine Ausgabe wegen Token-Limit fragmentiert wurde (Teil 1/3 etc.),
+MUSS das Modell in der nächsten Nachricht UNAUFGEFORDERT den vollständigen,
+zusammengeführten Codeblock liefern – auch wenn der Nutzer nichts sagt.
+Es ist verboten, fragmentierte Teile als „fertig“ zu betrachten.
+Jede Fragmentierung gilt als unvollständige Ausgabe, bis der komplette Block vorliegt.
 
 23. APPENDIX (AI-Schutzprotokolle)
 23.1 Snippet-Test
@@ -471,3 +481,4 @@ Wurde nichts weggelassen?
 Wurde keine Regel abgeschwächt?
 
 Ist der Block monolithisch und vollständig kopierbar?
+

@@ -448,6 +448,10 @@ Jeder Block muss vollständig kopierbar sein und darf keinerlei Meta-Kommentare 
 Die Fragmentierung ist ausschließlich erlaubt, wenn die Gesamtausgabe technisch
 nicht in einem einzigen Block erzeugt werden kann. Sie gilt nicht als Verstoß
 gegen §22.7 oder §22.12.
+22.21 Vorrangregel für Fragmentierung
+§22.20 übersteuert §22.12 vollständig, sobald die technische Ausgabelängenbegrenzung erreicht wird.
+In diesem Fall gilt ausschließlich die Notfall-Fragmentierungsregel.
+§22.12 bleibt nur dann gültig, wenn die Ausgabe technisch in einem Block erzeugt werden kann.
 
 23. APPENDIX (AI-Schutzprotokolle)
 23.1 Snippet-Test
@@ -465,4 +469,5 @@ Enthält er keine Positionshinweise („einfügen bei §…”)?
 Wurde nichts zusammengefasst?
 Wurde nichts weggelassen?
 Wurde keine Regel abgeschwächt?
+
 Ist der Block monolithisch und vollständig kopierbar?
